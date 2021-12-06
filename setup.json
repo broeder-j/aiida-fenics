@@ -19,6 +19,11 @@
         "gmsh~=4.8",
         "meshio[all]~=5.0"
     ],
+    "entry_points": {
+        "aiida.workflows": [
+            "fenics.geometry_poisson = aiida_fenics.workflows.geometry_poisson:GeometryPoisson"
+        ]
+    },
     "extras_require": {
         "pre-commit": [
             "pre-commit~=2.2",
