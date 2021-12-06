@@ -7,6 +7,8 @@ import tempfile
 from aiida.engine import calcfunction
 from aiida.orm import Int, SinglefileData
 
+from aiida_fenics.utils.logging import suppress_output
+
 
 @calcfunction
 def geometry_to_mesh(geometry: SinglefileData, dimension: Int):
@@ -20,7 +22,8 @@ def geometry_to_mesh(geometry: SinglefileData, dimension: Int):
 
         with tempfile.NamedTemporaryFile(suffix='.msh') as target:
             parameters = [executable, f'-{dimension.value}', '-o', target.name, source.name]
-            subprocess.call(parameters)
+            with suppress_output():
+                subprocess.call(parameters)
             output_mesh = SinglefileData(target)
 
     return {'mesh': output_mesh}

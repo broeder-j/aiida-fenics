@@ -37,6 +37,7 @@ def get_geometry(filepath_resources):
 @pytest.fixture
 def get_mesh(filepath_resources):
     """Return the path to file of the requested mesh."""
+
     def _factory(mesh):
         """Return the filepath of the mesh with the given name."""
         return filepath_resources / 'meshes' / mesh
