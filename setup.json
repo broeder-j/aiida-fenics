@@ -16,7 +16,8 @@
     "python_requires": ">=3.7",
     "install_requires": [
         "aiida-core~=1.6",
-        "gmsh~=4.8"
+        "gmsh~=4.8",
+        "meshio[all]~=5.0"
     ],
     "extras_require": {
         "pre-commit": [
