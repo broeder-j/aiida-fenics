@@ -1,0 +1,34 @@
+{
+    "author": "Sebastiaan P. Huber",
+    "author_email": "mail@sphuber.net",
+    "classifiers": [
+        "Development Status :: 2 - Pre-Alpha",
+        "Framework :: AiiDA",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: MacOS :: MacOS X",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9"
+    ],
+    "description": "AiiDA plugin for the FEniCS computing platform for solving partial differential equations.",
+    "python_requires": ">=3.7",
+    "install_requires": [
+        "aiida-core~=1.6"
+    ],
+    "extras_require": {
+        "pre-commit": [
+            "pre-commit~=2.2",
+            "pylint~=2.6"
+        ],
+        "tests": [
+            "pgtest~=1.3",
+            "pytest~=5.4"
+        ]
+    },
+    "license": "MIT License",
+    "name": "aiida-fenics",
+    "url": "https://github.com/sphuber/aiida-fenics",
+    "version": "0.1.0"
+}
