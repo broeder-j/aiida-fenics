@@ -68,7 +68,7 @@ jobs:
         -   name: Install system dependencies
             run: |
                 sudo apt update
-                sudo apt install postgresql
+                sudo apt install postgresql libglu1-mesa
 
         -   name: Install python dependencies
             run: |
